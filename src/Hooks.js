@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import Skeleton from '@material-ui/lab/Skeleton';
 
 export default function Hooks(props) {
     const { classes, url } = props;
@@ -11,10 +11,13 @@ export default function Hooks(props) {
     }
     return (
         <React.Fragment>
+            <p>Hi there!</p>
             <p>click count:{clicks}</p>
             <button onClick={doSomething} data-something="Default">
                 Default</button>
+
         </React.Fragment>
+
 
     );
 }
