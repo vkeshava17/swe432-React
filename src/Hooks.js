@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react';
 
-const Home = () => {
+export default function Hooks(props) {
     const { classes, url } = props;
     let [clicks, setClicks] = useState(0);
 
-    const submit = function (event) {
+    const doSomething = function (event) {
         console.log(event.currentTarget.getAttribute('data-something'));
         setClicks(clicks + 1);
     }
     return (
         <React.Fragment>
-            <p>Hi there HELLO!</p>
+            <p>Hi there!</p>
             <p>click count:{clicks}</p>
-            <button onClick={submit} data-something="Default">
+            <button onClick={doSomething} data-something="Default">
                 Default</button>
 
         </React.Fragment>
@@ -20,4 +20,3 @@ const Home = () => {
 
     );
 }
-export default Home;
