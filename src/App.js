@@ -5,7 +5,7 @@ import Survey from './Survey';
 function App() {
   return (
     <div className="App">
-      <Hooks/>
+      <Survey/>
     </div>
   );
 }
