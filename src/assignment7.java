@@ -65,7 +65,7 @@ public void doPost (HttpServletRequest request, HttpServletResponse response)
 ********************************************************* */
 public void doGet (HttpServletRequest request, HttpServletResponse response)
        throws ServletException, IOException {
-    RequestDispatcher fd = request.getRequestDispatcher("App.js");
+    RequestDispatcher fd = request.getRequestDispatcher("Fetcher.js");
 	fd.forward(request,response);
 
 } // End doGet
