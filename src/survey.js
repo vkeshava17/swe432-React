@@ -10,7 +10,7 @@ export default function Survey(props) {
     }
     return (
         <React.Fragment>
-            <p>Hi there!</p>
+            <p>Hi there HELLO!</p>
             <p>click count:{clicks}</p>
             <button onClick={submit} data-something="Default">
                 Default</button>
