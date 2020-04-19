@@ -76,21 +76,23 @@ class Survey extends React.Component {
 		}
 
 		var found = false
-		var not_found = []
+		var found_1 = false
 
 		var clean_Q1 = ["Very Easy", "Easy", "Hard", "Very Hard"];
 		for (var i = 0; i < clean_Q1.length; i++) {
 			if (document.getElementById(clean_Q1[i]).checked) {
 				found = true;
+				found_1 = true
 				break;
 			}
 		}
 
-		if (!found) {
-			not_found.append("Q1")
+		if (!found_1) {
+      document.getElementById("Q1").style.backgroundColor = "#8b0000";
 		}
 
 		var clean_Q2 = ["Never", "1-3 times", "1-3 times", "1-3 times"];
+		var found_2
 		for (var i = 0; i < clean_Q2.length; i++) {
 			if (document.getElementById(clean_Q2[i]).checked) {
 				found = true;
@@ -98,25 +100,28 @@ class Survey extends React.Component {
 			}
 		}
 
-		if (!found) {
-			not_found.append("Q2")
+		var found_2 = false
+		if (!found_2) {
+      document.getElementById("Q2").style.backgroundColor = "#8b0000";
 		}
 
-		if (!found) {
-			not_found.append("Q3")
+		var found_3 = false
+		if (!found_3) {
+      document.getElementById("Q3").style.backgroundColor = "#8b0000";
 		}
 
-		if (!found) {
-			not_found.append("Q4")
+		var found_4 = false
+		if (!found_4) {
+      document.getElementById("Q4").style.backgroundColor = "#8b0000";
 		}
 
-		if (!found) {
-			not_found.append("Q5")
+		var found_5 = false
+		if (!found_5) {
+      document.getElementById("Q5").style.backgroundColor = "#8b0000";
 		}
 
 		if (!found) {
       event.preventDefault(); //prevent submission
-      document.getElementById("Q1").style.backgroundColor = "#8b0000";
 			alert('Please answer the highighted questions.');
 		}
 
