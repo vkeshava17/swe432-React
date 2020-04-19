@@ -208,6 +208,8 @@ class Survey extends React.Component {
 				</div>
 
 			<button type="submit" style="width: 10%; height: 4%; font-size: 13px;">Submit Answers</button>
+			</br>
+			<button type="clear" style="width: 10%; height: 4%; font-size: 13px;" onClick={this.clearFields}>Clear All Answers</button>
 			</div>
 		</form>
 
