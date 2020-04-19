@@ -19,6 +19,7 @@ class Survey extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleChange = this.handleChange.bind(this);
 		this.clearFields = this.clearFields.bind(this);
+		this.handleRadio = this.handleRadio.bind(this);
 
 	}
 
@@ -36,6 +37,12 @@ class Survey extends React.Component {
 			event.preventDefault();
 		}
 
+		else {
+			this.handleRadio
+		}
+}
+
+	handleRadio(event) {
 		var found_1 = false
 		var clean_Q1 = ["Very Easy", "Easy", "Hard", "Very Hard"];
 		for (var i = 0; i < clean_Q1.length; i++) {
