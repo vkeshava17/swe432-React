@@ -129,13 +129,33 @@ class Survey extends React.Component {
 		       document.getElementById(clean_Q1[i]).checked = false;
 		 }
 
+		 var clean_Q2 = ["Never", "1-3 times", "1-3 times", "1-3 times"];
+		     for (var i = 0; i < clean_Q2.length; i++) {
+		       document.getElementById(clean_Q2[i]).checked = false;
+		 }
+
+		 var clean_Q3 = ["Very Reasonable", "Reasonable", "Expensive", "Very Expensive"];
+		     for (var i = 0; i < clean_Q3.length; i++) {
+		       document.getElementById(clean_Q3[i]).checked = false;
+		 }
+
+		 var clean_Q4 = ["Yes", "No", "Depends"];
+		     for (var i = 0; i < clean_Q4.length; i++) {
+		       document.getElementById(clean_Q3[i]).checked = false;
+		 }
+
+		 var clean_Q5 = ["Very Accurate", "Accurate", "Not Accurate"];
+		     for (var i = 0; i < clean_Q5.length; i++) {
+ 		       document.getElementById(cleans[i]).checked = false;
+		 }
+
 
 	 }
 
 	render() {
 		return(
 
-		<form id="bookstorerating" method="post" action="https://swe432vkeshava.herokuapp.com/asst7" name="UserInfo" onSubmit={this.handleSubmit} onClear={this.clearFields}>
+		<form id="bookstorerating" method="post" action="https://swe432vkeshava.herokuapp.com/asst7" name="UserInfo">
 			<div>
 				<label htmlFor="Major">Major: </label>
 				<input type="text" id="Major" name="Major" required onChange={this.handleChange}/>
@@ -221,13 +241,14 @@ class Survey extends React.Component {
 					<p> Additional Comments, Suggestions, and Concerns:</p>
 					<textarea id="textArea" name="Comments" rows="6" cols="40"></textarea>
 				</div>
-			<button type="submit">Submit Answers</button>
+			<br/>
+			<button type="submit" onClick={this.handleSubmit}>Submit Answers</button>
 			<br/>
 			<br/>
-			<button type="clear" onClick={this.clearFields}>Clear All Answers</button>
-			<br/>
-			<br/>
+			<button type="clear" onClick={this.clearFields}>Clear Comments</button>
 			</div>
+			<br/>
+			<br/>
 		</form>
 
 	);
