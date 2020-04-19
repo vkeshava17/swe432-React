@@ -38,7 +38,7 @@ class Survey extends React.Component {
 		}
 
 		else {
-			this.handleRadio
+			this.handleRadio(event)
 		}
 }
 
