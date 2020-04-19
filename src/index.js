@@ -203,7 +203,7 @@ class Survey extends React.Component {
 					<textarea id="textArea" name="Comments" rows="6" cols="40"></textarea>
 				</div>
 
-			<button type="submit">Submit Answers</button>
+			<button type="submit" style="width: 10%; height: 4%; font-size: 13px;">Submit Answers</button>
 			</div>
 		</form>
 
