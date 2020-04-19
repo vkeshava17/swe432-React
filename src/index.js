@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Container, Content, Button } from 'native-base';
 //import './index.css';
 //import App from './App';
 //import * as serviceWorker from './serviceWorker';
@@ -245,7 +246,7 @@ class Survey extends React.Component {
 			<button type="submit" onClick={this.handleSubmit}>Submit Answers</button>
 			<br/>
 			<br/>
-			<button type="clear" onClick={this.clearFields}>Clear Comments</button>
+			<button type="clear" formnovalidate onClick={this.clearFields}>Clear Comments</button>
 			</div>
 			<br/>
 			<br/>
