@@ -245,7 +245,7 @@ class Survey extends React.Component {
 					<textarea id="textArea" name="Comments" rows="6" cols="40"></textarea>
 				</div>
 			<br/>
-			<button type="submit" onClick={this.handleSubmit}>Submit Answers</button>
+			<button type="submit" formnovalidate onClick={this.handleSubmit}>Submit Answers</button>
 			<br/>
 			<br/>
 			<button type="clear" formnovalidate onClick={this.clearFields}>Clear Comments</button>
