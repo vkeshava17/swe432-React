@@ -99,6 +99,22 @@ class Survey extends React.Component {
 		}
 
 		if (!found) {
+			found.append("Q2")
+		}
+
+		if (!found) {
+			found.append("Q3")
+		}
+
+		if (!found) {
+			found.append("Q4")
+		}
+
+		if (!found) {
+			found.append("Q5")
+		}
+
+		if (!found) {
       event.preventDefault(); //prevent submission
       document.getElementById("Q1").style.backgroundColor = "#8b0000";
 		}
@@ -195,7 +211,7 @@ class Survey extends React.Component {
 				<br/>
 				<br/>
 				<div className="radio-button-div">
-					<label id=Q1> 1. How easy was it for you to find your textbooks in the store? </label>
+					<label id="Q1"> 1. How easy was it for you to find your textbooks in the store? </label>
 					<br/>
 					<input type="radio" name = "Q1" id="Very Easy" value="Very Easy" onChange={this.handleChange}/>
 					<label htmlFor="Very Easy">Very Easy</label>
@@ -210,7 +226,7 @@ class Survey extends React.Component {
 					<label htmlFor="Very Hard">Very Hard</label>
 					<br/>
 					<br/>
-					<label> 2. How many times were the textbooks you needed (digital or hard copy) out of stock? </label>
+					<label id="Q2"> 2. How many times were the textbooks you needed (digital or hard copy) out of stock? </label>
 					<br/>
 					<input type="radio" name="Q2" id="Never" value="Never" onChange={this.handleChange}/>
 					<label htmlFor="Never">Never</label>
@@ -226,7 +242,7 @@ class Survey extends React.Component {
 					<br/>
 					<br/>
 
-					<label> 3. How reasonable do you think the textbook prices were compared to other sellers? </label>
+					<label id="Q3"> 3. How reasonable do you think the textbook prices were compared to other sellers? </label>
 					<br/>
 					<input type="radio" name="Q3" id="Very Reasonable" value="Very Reasonable" onChange={this.handleChange}/>
 					<label htmlFor="Very Reasonable">Very Reasonable</label>
@@ -241,7 +257,7 @@ class Survey extends React.Component {
 					<label htmlFor="Very Expensive">Very Expensive</label>
 					<br/>
 			        <br/>
-					<label> 4. If given the option, do you prefer digital or hard copy textbooks? </label>
+					<label id="Q4"> 4. If given the option, do you prefer digital or hard copy textbooks? </label>
 					<br/>
 					<input type="radio" name="Q4" id="Yes" value="Yes" onChange={this.handleChange}/>
 					<label htmlFor="Yes">Yes</label>
@@ -253,7 +269,7 @@ class Survey extends React.Component {
 					<label htmlFor="Depends">Depends on the class</label>
 					<br/>
 			        <br/>
-					<label> 5. How accurate are the recommended and required textbook lists that the bookstore provides online? </label>
+					<label id="Q5"> 5. How accurate are the recommended and required textbook lists that the bookstore provides online? </label>
 					<br/>
 					<input type="radio" name="Q5" id="Very Accurate" value="Very Accurate" onChange={this.handleChange}/>
 					<label htmlFor="Very Accurate">Very Accurate, used all textbooks frequently</label>
