@@ -61,11 +61,15 @@ class Survey extends React.Component {
 	//}
 
 	handleSubmit(event) {
-		if (this.state.major % 1 === 0){
+		if (this.state.major % 1 === 0 & this.state.year % 1 !== 0) {
+			alert("Please correct these errors:\nMajor should be a valid name, not a number. For example: CS, SWE, IT, etc.\nYear should be an integer (ex: 1 = Freshman, 2 = Sophomore, etc.");
+			event.preventDefault();
+		}
+		else if (this.state.major % 1 === 0){
 			alert("Please correct this error: Major should be a valid name, not a number. For example: CS, SWE, IT, etc.");
 			event.preventDefault();
 		}
-		if (this.state.year % 1 !== 0) {
+		else if (this.state.year % 1 !== 0) {
 			alert("Please correct this error: Year should be an integer (ex: 1 = Freshman, 2 = Sophomore, etc.");
 			event.preventDefault();
 		}
