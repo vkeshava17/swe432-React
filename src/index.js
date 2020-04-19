@@ -118,12 +118,13 @@ class Survey extends React.Component {
 
 		<form id="bookstorerating" method="post" action="https://swe432vkeshava.herokuapp.com/asst7" name="UserInfo" onSubmit={this.handleSubmit}>
 			<div>
-				<label htmlFor="Major">Major:</label>
+				<label htmlFor="Major">Major: </label>
 				<input type="text" id="Major" name="Major" required onChange={this.handleChange}/>
 				<br/>
 				<br/>
-				<label htmlFor="Year"> Year:</label>
+				<label htmlFor="Year"> Year:   </label>
 				<input type="text" id="Year" name="Year" required onChange={this.handleChange}/>
+				<br/>
 				<br/>
 				<div className="radio-button-div">
 					<label> 1. How easy was it for you to find your textbooks in the store? </label>
