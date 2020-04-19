@@ -119,6 +119,10 @@ class Survey extends React.Component {
 
 
 	 clearFields(event) {
+		 //clear input fields
+		 document.getElementById("Major").value = "";
+		 document.getElementById("Year").value = "";
+		 document.getElementById("textArea").value = "";
 
 	 }
 
