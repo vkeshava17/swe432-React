@@ -215,7 +215,9 @@ class Survey extends React.Component {
 					<p> Additional Comments, Suggestions, and Concerns:</p>
 					<textarea id="textArea" name="Comments" rows="6" cols="40"></textarea>
 				</div>
-			<button type="submit" style="width: 10%; height: 4%; font-size: 13px;">Submit Answers</button>
+			<button type="submit">Submit Answers</button>
+			<br/>
+			<button type="submit">Clear All Answers</button>
 			</div>
 		</form>
 
