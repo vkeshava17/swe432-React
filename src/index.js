@@ -141,12 +141,12 @@ class Survey extends React.Component {
 
 		 var clean_Q4 = ["Yes", "No", "Depends"];
 		     for (var i = 0; i < clean_Q4.length; i++) {
-		       document.getElementById(clean_Q3[i]).checked = false;
+		       document.getElementById(clean_Q4[i]).checked = false;
 		 }
 
 		 var clean_Q5 = ["Very Accurate", "Accurate", "Not Accurate"];
 		     for (var i = 0; i < clean_Q5.length; i++) {
- 		       document.getElementById(cleans[i]).checked = false;
+ 		       document.getElementById(clean_Q5[i]).checked = false;
 		 }
 
 
