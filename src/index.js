@@ -211,7 +211,7 @@ class Survey extends React.Component {
 				<br/>
 				<br/>
 				<div className="radio-button-div">
-					<label id="Q1"> 1. How easy was it for you to find your textbooks in the store? </label>
+					<label for="Q1" id="Q1"> 1. How easy was it for you to find your textbooks in the store? </label>
 					<br/>
 					<input type="radio" name = "Q1" id="Very Easy" value="Very Easy" onChange={this.handleChange}/>
 					<label htmlFor="Very Easy">Very Easy</label>
