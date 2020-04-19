@@ -122,7 +122,7 @@ class Survey extends React.Component {
 				<input type="text" id="Major" name="Major" required onChange={this.handleChange}/>
 				<br/>
 				<br/>
-				<label htmlFor="Year"> Year:   </label>
+				<label htmlFor="Year"> Year:     </label>
 				<input type="text" id="Year" name="Year" required onChange={this.handleChange}/>
 				<br/>
 				<br/>
