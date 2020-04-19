@@ -75,52 +75,67 @@ class Survey extends React.Component {
 			event.preventDefault();
 		}
 
-		var found = false
 		var found_1 = false
-
 		var clean_Q1 = ["Very Easy", "Easy", "Hard", "Very Hard"];
 		for (var i = 0; i < clean_Q1.length; i++) {
 			if (document.getElementById(clean_Q1[i]).checked) {
-				found = true;
 				found_1 = true
 				break;
 			}
 		}
-
 		if (!found_1) {
-      document.getElementById("Q1").style.backgroundColor = "#8b0000";
+      document.getElementById("Q1").style.backgroundColor = "#E6FF33";
 		}
 
 		var clean_Q2 = ["Never", "1-3 times", "1-3 times", "1-3 times"];
-		var found_2
+		var found_2 = false;
 		for (var i = 0; i < clean_Q2.length; i++) {
 			if (document.getElementById(clean_Q2[i]).checked) {
-				found = true;
+				found_2 = true;
 				break;
 			}
 		}
-
-		var found_2 = false
 		if (!found_2) {
-      document.getElementById("Q2").style.backgroundColor = "#8b0000";
+      document.getElementById("Q2").style.backgroundColor = "#E6FF33";
 		}
 
 		var found_3 = false
+		var clean_Q3 = ["Very Reasonable", "Reasonable", "Expensive", "Very Expensive"];
+				for (var i = 0; i < clean_Q3.length; i++) {
+					if (document.getElementById(clean_Q3[i]).checked) {
+						found_3 = true
+						break;
+					}
+		}
 		if (!found_3) {
-      document.getElementById("Q3").style.backgroundColor = "#8b0000";
+      document.getElementById("Q3").style.backgroundColor = "#E6FF33";
 		}
 
 		var found_4 = false
+		var clean_Q4 = ["Yes", "No", "Depends"];
+				for (var i = 0; i < clean_Q4.length; i++) {
+					if (document.getElementById(clean_Q4[i]).checked) {
+						found_4 = true
+						break;
+					}
+		}
 		if (!found_4) {
-      document.getElementById("Q4").style.backgroundColor = "#8b0000";
+      document.getElementById("Q4").style.backgroundColor = "#E6FF33";
 		}
 
 		var found_5 = false
+		var clean_Q5 = ["Very Accurate", "Accurate", "Not Accurate"];
+				for (var i = 0; i < clean_Q5.length; i++) {
+					if (document.getElementById(clean_Q5[i]).checked) {
+						found_5 = true
+						break;
+					}
+		}
 		if (!found_5) {
-      document.getElementById("Q5").style.backgroundColor = "#8b0000";
+      document.getElementById("Q5").style.backgroundColor = "#E6FF33";
 		}
 
-		if (!found) {
+		if (!(found_1 & found_2 & found_3 & found_4 & found_5)) {
       event.preventDefault(); //prevent submission
 			alert('Please answer the highighted questions.');
 		}
