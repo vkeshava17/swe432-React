@@ -18,6 +18,7 @@ class Survey extends React.Component {
 		};
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.handleChange = this.handleChange.bind(this);
+		this.clearFields = this.clearFields.bind(this);
 
 	}
 
@@ -116,6 +117,10 @@ class Survey extends React.Component {
 		}
 	}
 
+
+	 clearFields(event) {
+
+	 }
 
 	render() {
 		return(
