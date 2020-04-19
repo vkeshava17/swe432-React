@@ -22,45 +22,6 @@ class Survey extends React.Component {
 
 	}
 
-	//function IsNum (string) {
-		//var value = parseInt(string);
-		//return (value > 0);
-	//}
-	//function CheckInput() {
-		//var ErrorMessage = '';
-		//var NumErrors = 0;
-		//var Major = document.UserInfo.Major;
-		//if (IsNum(Major.value)) {
-			//NumErrors++;
-			//ErrorMessage += '\n' + NumErrors + ') Major should be a valid name, not a number. For example: CS, SWE, IT, etc.';
-		//}
-		//if (Major.value == '')
-        //{
-			//NumErrors++;
-			//ErrorMessage += '\n' + NumErrors + ') Missing major. ';
-		//}
-		//var Year = document.UserInfo.Year;
-		//if (!IsNum(Year.value)) {
-			//NumErrors++;
-			//ErrorMessage += '\n' + NumErrors + ') Year should be an integer (ex: 1 = Freshman, 2 = Sophomore, etc.). ';
-		//}
-		//if (Year.value == '')
-        //{
-			//NumErrors++;
-			//ErrorMessage += '\n' + NumErrors + ') Missing year.  ';
-		//}
-		//if (NumErrors > 0)
-		//{
-
-		//	return (false);
-		//}
-		//else
-		//{
-			//alert('Your responses have been saved. Thank you for your feedback!');
-			//return (true);
-		//}
-	//}
-
 	handleSubmit(event) {
 		if (this.state.major % 1 === 0 & this.state.year % 1 !== 0) {
 			alert("Please correct these errors:\nMajor should be a valid name, not a number. For example: CS, SWE, IT, etc.\nYear should be an integer (ex: 1 = Freshman, 2 = Sophomore, etc.");
@@ -86,6 +47,9 @@ class Survey extends React.Component {
 		if (!found_1) {
       document.getElementById("Q1").style.backgroundColor = "#E6FF33";
 		}
+		else {
+			document.getElementById("Q1").style.backgroundColor = "#E1F3DB";
+		}
 
 		var clean_Q2 = ["Never", "1-3 times", "1-3 times", "1-3 times"];
 		var found_2 = false;
@@ -97,6 +61,9 @@ class Survey extends React.Component {
 		}
 		if (!found_2) {
       document.getElementById("Q2").style.backgroundColor = "#E6FF33";
+		}
+		else {
+			document.getElementById("Q2").style.backgroundColor = "#E1F3DB";
 		}
 
 		var found_3 = false
@@ -110,6 +77,9 @@ class Survey extends React.Component {
 		if (!found_3) {
       document.getElementById("Q3").style.backgroundColor = "#E6FF33";
 		}
+		else {
+			document.getElementById("Q3").style.backgroundColor = "#E1F3DB";
+		}
 
 		var found_4 = false
 		var clean_Q4 = ["Yes", "No", "Depends"];
@@ -121,6 +91,9 @@ class Survey extends React.Component {
 		}
 		if (!found_4) {
       document.getElementById("Q4").style.backgroundColor = "#E6FF33";
+		}
+		else {
+			document.getElementById("Q4").style.backgroundColor = "#E1F3DB";
 		}
 
 		var found_5 = false
@@ -134,12 +107,14 @@ class Survey extends React.Component {
 		if (!found_5) {
       document.getElementById("Q5").style.backgroundColor = "#E6FF33";
 		}
+		else {
+			document.getElementById("Q5").style.backgroundColor = "#E1F3DB";
+		}
 
 		if (!(found_1 & found_2 & found_3 & found_4 & found_5)) {
       event.preventDefault(); //prevent submission
 			alert('Please answer the highighted questions.');
 		}
-
 		else {
 			alert('Your responses have been saved. Thank you for your feedback!');
 		}
@@ -221,7 +196,7 @@ class Survey extends React.Component {
 	render() {
 		return(
 
-		<form id="bookstorerating" method="post" novalidate action="https://swe432vkeshava.herokuapp.com/asst7" name="UserInfo">
+		<form id="bookstorerating" method="post" action="https://swe432vkeshava.herokuapp.com/asst7" name="UserInfo" novalidate>
 			<div>
 				<label htmlFor="Major">Major: </label>
 				<input type="text" id="Major" name="Major" required onChange={this.handleChange}/>
