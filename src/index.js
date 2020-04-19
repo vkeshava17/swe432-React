@@ -32,7 +32,7 @@ class Survey extends React.Component {
 			alert("Please correct this error: Major should be a valid name, not a number. For example: CS, SWE, IT, etc.");
 			event.preventDefault();
 		}
-		else if (this.state.year % 1 !== 0) {
+		else if (this.state.year % 1 !== 0 & this.state.year != "") {
 			alert("Please correct this error: Year should be an integer (ex: 1 = Freshman, 2 = Sophomore, etc.");
 			event.preventDefault();
 		}
@@ -177,7 +177,7 @@ class Survey extends React.Component {
 		       document.getElementById(clean_Q1[i]).checked = false;
 		 }
 
-		 var clean_Q2 = ["Never", "1-3 times", "1-3 times", "1-3 times"];
+		 var clean_Q2 = ["Never", "1-3 times", "4-6 times", "7 or more times"];
 		     for (var i = 0; i < clean_Q2.length; i++) {
 		       document.getElementById(clean_Q2[i]).checked = false;
 		 }
