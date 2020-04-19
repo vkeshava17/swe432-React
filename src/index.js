@@ -124,6 +124,8 @@ class Survey extends React.Component {
 		 document.getElementById("Year").value = "";
 		 document.getElementById("textArea").value = "";
 
+
+
 	 }
 
 	render() {
@@ -217,7 +219,8 @@ class Survey extends React.Component {
 				</div>
 			<button type="submit">Submit Answers</button>
 			<br/>
-			<button type="submit">Clear All Answers</button>
+			<br/>
+			<button type="clear" onClick={this.clearFields}>Clear All Answers</button>
 			</div>
 		</form>
 
