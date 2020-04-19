@@ -197,6 +197,11 @@ class Survey extends React.Component {
  		       document.getElementById(clean_Q5[i]).checked = false;
 		 }
 
+		 document.getElementById("Q1").style.backgroundColor = "#E1F3DB";
+		 document.getElementById("Q2").style.backgroundColor = "#E1F3DB";
+		 document.getElementById("Q3").style.backgroundColor = "#E1F3DB";
+		 document.getElementById("Q4").style.backgroundColor = "#E1F3DB";
+		 document.getElementById("Q5").style.backgroundColor = "#E1F3DB";
 
 	 }
 
