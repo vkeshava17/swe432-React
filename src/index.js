@@ -75,7 +75,33 @@ class Survey extends React.Component {
 			event.preventDefault();
 		}
 
+		var found = false
+		var not_found = []
 
+		var clean_Q1 = ["Very Easy", "Easy", "Hard", "Very Hard"];
+		for (var i = 0; i < clean_Q1.length; i++) {
+			if (document.getElementById(clean_Q1[i]).checked) {
+				found = true;
+				break;
+			}
+		}
+
+		if (!found) {
+			found.append("Q1")
+		}
+
+		var clean_Q2 = ["Never", "1-3 times", "1-3 times", "1-3 times"];
+		for (var i = 0; i < clean_Q2.length; i++) {
+			if (document.getElementById(clean_Q2[i]).checked) {
+				found = true;
+				break;
+			}
+		}
+
+		if (!found) {
+      event.preventDefault(); //prevent submission
+      document.getElementById("Q1").style.backgroundColor = "#8b0000";
+		}
 
 		else {
 			alert('Your responses have been saved. Thank you for your feedback!');
@@ -169,7 +195,7 @@ class Survey extends React.Component {
 				<br/>
 				<br/>
 				<div className="radio-button-div">
-					<label> 1. How easy was it for you to find your textbooks in the store? </label>
+					<label id=Q1> 1. How easy was it for you to find your textbooks in the store? </label>
 					<br/>
 					<input type="radio" name = "Q1" id="Very Easy" value="Very Easy" onChange={this.handleChange}/>
 					<label htmlFor="Very Easy">Very Easy</label>
