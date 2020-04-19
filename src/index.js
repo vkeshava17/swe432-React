@@ -87,7 +87,7 @@ class Survey extends React.Component {
 		}
 
 		if (!found) {
-			found.append("Q1")
+			not_found.append("Q1")
 		}
 
 		var clean_Q2 = ["Never", "1-3 times", "1-3 times", "1-3 times"];
@@ -99,24 +99,25 @@ class Survey extends React.Component {
 		}
 
 		if (!found) {
-			found.append("Q2")
+			not_found.append("Q2")
 		}
 
 		if (!found) {
-			found.append("Q3")
+			not_found.append("Q3")
 		}
 
 		if (!found) {
-			found.append("Q4")
+			not_found.append("Q4")
 		}
 
 		if (!found) {
-			found.append("Q5")
+			not_found.append("Q5")
 		}
 
 		if (!found) {
       event.preventDefault(); //prevent submission
       document.getElementById("Q1").style.backgroundColor = "#8b0000";
+			alert('Please answer the highighted questions.');
 		}
 
 		else {
@@ -200,7 +201,7 @@ class Survey extends React.Component {
 	render() {
 		return(
 
-		<form id="bookstorerating" method="post" action="https://swe432vkeshava.herokuapp.com/asst7" name="UserInfo">
+		<form id="bookstorerating" method="post" novalidate action="https://swe432vkeshava.herokuapp.com/asst7" name="UserInfo">
 			<div>
 				<label htmlFor="Major">Major: </label>
 				<input type="text" id="Major" name="Major" required onChange={this.handleChange}/>
