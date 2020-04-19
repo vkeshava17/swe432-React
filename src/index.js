@@ -124,6 +124,10 @@ class Survey extends React.Component {
 		 document.getElementById("Year").value = "";
 		 document.getElementById("textArea").value = "";
 
+		 var clean_Q1 = ["Very Easy", "Easy", "Hard", "Very Hard"];
+		     for (var i = 0; i < clean_Q1.length; i++) {
+		       document.getElementById(clean_Q1[i]).checked = false;
+		 }
 
 
 	 }
@@ -131,7 +135,7 @@ class Survey extends React.Component {
 	render() {
 		return(
 
-		<form id="bookstorerating" method="post" action="https://swe432vkeshava.herokuapp.com/asst7" name="UserInfo" onSubmit={this.handleSubmit}>
+		<form id="bookstorerating" method="post" action="https://swe432vkeshava.herokuapp.com/asst7" name="UserInfo" onSubmit={this.handleSubmit} onClear={this.clearFields}>
 			<div>
 				<label htmlFor="Major">Major: </label>
 				<input type="text" id="Major" name="Major" required onChange={this.handleChange}/>
@@ -221,6 +225,8 @@ class Survey extends React.Component {
 			<br/>
 			<br/>
 			<button type="clear" onClick={this.clearFields}>Clear All Answers</button>
+			<br/>
+			<br/>
 			</div>
 		</form>
 
