@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Container, Content, Button } from 'native-base';
 //import './index.css';
 //import App from './App';
 //import * as serviceWorker from './serviceWorker';
@@ -75,6 +74,9 @@ class Survey extends React.Component {
 			alert("Please correct this error: Year should be an integer (ex: 1 = Freshman, 2 = Sophomore, etc.");
 			event.preventDefault();
 		}
+
+
+
 		else {
 			alert('Your responses have been saved. Thank you for your feedback!');
 		}
