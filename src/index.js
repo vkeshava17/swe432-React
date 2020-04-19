@@ -116,7 +116,7 @@ class Survey extends React.Component {
 	render() {
 		return(
 
-		<form id="bookstorerating" method="post" action="https://spswe432.herokuapp.com/asst6" name="UserInfo" onSubmit={this.handleSubmit}>
+		<form id="bookstorerating" method="post" action="https://swe432vkeshava.herokuapp.com/asst7" name="UserInfo" onSubmit={this.handleSubmit}>
 			<div>
 				<label htmlFor="Major">Major:</label>
 				<input type="text" id="Major" name="Major" required onChange={this.handleChange}/>
