@@ -58,7 +58,7 @@ class Survey extends React.Component {
 			document.getElementById("Q1").style.backgroundColor = "#E1F3DB";
 		}
 
-		var clean_Q2 = ["Never", "1-3 times", "1-3 times", "1-3 times"];
+		var clean_Q2 = ["Never", "1-3 times", "4-6 times", "7 or more times"];
 		var found_2 = false;
 		for (var i = 0; i < clean_Q2.length; i++) {
 			if (document.getElementById(clean_Q2[i]).checked) {
